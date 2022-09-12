@@ -12,7 +12,7 @@ Determines how much money you will pay in total for renting three movies for mul
 // let movie3Days = Number(prompt("How many days will you keep your third movie"));
 // let pricePerDay = Number(prompt("How much does it cost to rent a move per day"));
 // let rentalTotal = (movie1Days+movie2Days+movie3Days)*pricePerDay;
-// alert("Keep the movies for " + (movie1Days + movie2Days + movie3Days) + " total days for $" + pricePerDay + " equals " + rentalTotal);
+// alert("Keeping the movies for " + (movie1Days + movie2Days + movie3Days) + " total days for $" + pricePerDay + " equals " + rentalTotal);
 
 /*
 Determines how much money you will make in total after calculating hourly wage & hours worked for three employers
