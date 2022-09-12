@@ -1,4 +1,4 @@
-function() {
+(function() {
 
     "use strict";
 
@@ -112,4 +112,4 @@ function() {
 
     console.log(applyDiscount(100, .2));
 
-}
+})
