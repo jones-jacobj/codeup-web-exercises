@@ -24,11 +24,11 @@ let employer1Wages = employer1 * employer1PerHour
 let employer2 = Number(prompt("How many hours did you work at the second Employer?"))
 let employer2PerHour = Number(prompt("How much did you make per hour working at that Employer?"))
 let employer2Wages = employer2 * employer2PerHour
-let employer3= Number(prompt("How many hours did you work at the third Employer?"))
+let employer3 = Number(prompt("How many hours did you work at the third Employer?"))
 let employer3PerHour = Number(prompt("How much did you make per hour working at that Employer?"))
 let employer3Wages = employer3 * employer3PerHour
 
-let totalHours = employer1+employer2+employer3
-let totalWages = employer1Wages+employer2Wages+employer3Wages
+let totalHours = employer1 + employer2 + employer3
+let totalWages = employer1Wages + employer2Wages + employer3Wages
 
 alert("In total you worked " + totalHours + " hours, and made $" + totalWages)

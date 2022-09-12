@@ -1,6 +1,5 @@
-
-function firstAndLast(firstName, lastName){
-    return firstName+ " " + lastName;
+function firstAndLast(firstName, lastName) {
+    return firstName + " " + lastName;
 }
 
 let promptedFirstName = prompt("What is your first name?")
