@@ -27,5 +27,3 @@ function iceCreamCones(){
     }
     console.log("We have sold all the cones!");     //After completing function; celebrate!
 }
-
-iceCreamCones();
