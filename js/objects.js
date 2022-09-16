@@ -82,6 +82,14 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    let book0 = makeBook("Great Expectations","Charles","Dickens");
+    let book1 = makeBook("Moby Dick", "Hermain","Melville");
+    let book2 = makeBook("20,000 Leagues Under the Sea","Jules","Verne");
+    let book3 = makeBook("Journey to the Center of the Earth","Jules","Verne");
+    let book4 = makeBook("Lord of the Rings","J.R.R.","Tolkien");
+
+    let books = [book0,book1,book2,book3,book4]
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -107,6 +115,12 @@
      *      ...
      */
 
+    let num = 1;
+    books.forEach(element=> {
+        showBookInfo(num, element);
+        num++;
+    });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -117,5 +131,20 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function makeBook(title, authorFirstName, authorLastName){
+        let book = {}
+        book["title"] = title;
+        book["author.firstName"] = authorFirstName;
+        book["author.lastName"] = authorLastName;
+
+        return book;
+    }
+
+    function showBookInfo(number, book){
+        console.log("Book # " + number);
+        console.log("Title: " + book["title"])
+        console.log("Author: " + book["author.firstName"] + " " + book["author.lastName"]);
+    }
 
 })();
