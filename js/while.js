@@ -1,4 +1,7 @@
 
+/*
+    Doubles the number 2 until it reaches 65536
+ */
 function whileLoop(){
     let num = 2;
     while(num<65537){
