@@ -17,9 +17,26 @@ function randomType(){
     }
 }
 
+/*
+    Makes a pretty pyramid of numbers
+ */
 function pyramidAscii(){
+    let output = ""
     for (let i=1; i<10;i++){
+        output=""
         for (let j=i; j>0; j--){
+            output += i;
+        }
+        console.log(output);
+    }
+}
+
+/*
+    Goes from 100 to 5 and prints out all numbers divisible by five
+ */
+function divisibleByFivePrint(){
+    for (let i=100; i>4; i--){
+        if(i % 5 === 0){
             console.log(i);
         }
     }
