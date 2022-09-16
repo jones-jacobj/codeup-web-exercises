@@ -16,3 +16,11 @@ function randomType(){
         console.log(random + " = " + typing);
     }
 }
+
+function pyramidAscii(){
+    for (let i=1; i<10;i++){
+        for (let j=i; j>0; j--){
+            console.log(i);
+        }
+    }
+}
