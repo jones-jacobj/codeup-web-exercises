@@ -34,7 +34,7 @@ function pyramidAscii(){
 /*
     Goes from 100 to 5 and prints out all numbers divisible by five
  */
-function divisibleByFivePrint(){
+function CountdownByFivePrint(){
     for (let i=100; i>4; i--){
         if(i % 5 === 0){
             console.log(i);
