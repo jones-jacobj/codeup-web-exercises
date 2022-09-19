@@ -21,7 +21,7 @@ function iceCreamCones(){
         let conesSold = Math.floor(Math.random() * 5) + 1;
         let tempCones = allCones -= conesSold;
         if(tempCones>=0){
-            console.log("We have to sell " + allCones + " cones; We just sold " + conesSold + " that means we now have to sell " + tempCones)
+            console.log("We have to sell " + allCones + " cones; We just sold " + conesSold + " that means we now have to sell  " + tempCones)
             conesSold = tempCones;
         }else{
             console.log("I cannot sell " + conesSold + " as I only have " + allCones);
@@ -29,5 +29,3 @@ function iceCreamCones(){
     }
     console.log("We have sold all the cones!");     //After completing function; celebrate!
 }
-
-iceCreamCones();
