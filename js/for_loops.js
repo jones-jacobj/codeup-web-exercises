@@ -31,6 +31,7 @@ function pyramidAscii(){
     }
 }
 
+
 /*
     Goes from 100 to 5 and prints out all numbers divisible by five
  */
