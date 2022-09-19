@@ -21,10 +21,9 @@ function randomType(){
     Makes a pretty pyramid of numbers
  */
 function pyramidAscii(){
-    let output = ""
     for (let i=1; i<10;i++){
-        output=""
-        for (let j=i; j>0; j--){
+        let output=""
+        for (let j=0; j<i; j++){
             output += i;
         }
         console.log(output);

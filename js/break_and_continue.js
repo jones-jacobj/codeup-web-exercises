@@ -18,9 +18,8 @@ function pickANumber() {
         if(i!==Number(chosenNumber)){   //This is NOT the number the player gave
             console.log(i)
         }else{
-            console.log("Yikes, skipping " + chosenNumber);
+            //console.log("Yikes, skipping " + chosenNumber);
+            console.log(`Yikes skipping ${chosenNumber}`)
         }
     }
 }
-
-pickANumber();
