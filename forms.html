@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email address">
+    <br>
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" placeholder=" ">
+    <br>
+    <label for="bio" style="vertical-align: top">Biography</label>
+    <textarea id="bio" name="bio" cols="30" rows="5">Tell us about yourself!</textarea>
+    <!-- RADIO CHECKS -->
+    <br>
+    <h3>Where did you hear about us?</h3>
+    <p>Billboard
+    <input type="radio" name="whereDidYouHear" value="billboard" checked="true"></p>
+    <p>Radio Advertisement
+    <input type="radio" name="whereDidYouHear" value="radio"><br></p>
+    <p>Internet Advertisement
+    <input type="radio" name="whereDidYouHear" value="internet"><br></p>
+    <p>Other
+    <input type="radio" name="whereDidYouHear" value="other"><br></p>
+    <br>
+    <label for="browser">Which browser are you using?</label>
+    <select name="browser" id="browser">
+        <option value="chrome">Chrome (Chromium)</option>
+        <option value="safari">Safari</option>
+        <option value="firefox">Firefox</option>
+        <option value="opera">Opera</option>
+    </select>
+    <!--<input type="submit">-->
+    <br>
+    <button type="submit">Submit the form</button>
+</form>
+</body>
+</html>
