@@ -3,4 +3,22 @@
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+.more-fancy-headers {
+    color: orange;
+    text-decoration: underline;
+}
+
+html, body {
+    color: white;
+    background-image: url("/images/wallpapersden.com_linux-retro_1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-color: black;
+}
+
+ul>li{
+    list-style-type: null;
 }
