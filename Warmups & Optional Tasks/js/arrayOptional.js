@@ -39,3 +39,36 @@ let bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "re
 // console.log(removeAll(bugs, "ant"));
 // console.log(removeAll(bugs, "mosquito"));
 // console.log(removeAll(bugs, "roach"));
+
+
+// Make a function called randomIntBetween(min, max) that returns a random number
+// between the min and the max.
+function randomBetween(min, max){
+    return (Math.floor(Math.random() * max) + min);
+}
+// Make a function called `coinFlip()` that returns either 0 or 1, randomly
+function coinFlip(){
+    return randomBetween(0,2);
+}
+// Make a function called `twoDice()` that returns the sum of rolling two six
+// sided dice.
+function twoDice(){
+    let dice1 = randomBetween(1,6);
+    let dice2 = randomBetween(1,6);
+    return (`${dice1} + ${dice2} = ${dice1+dice2}`);
+}
+// Make a function called `twentySidedDie()` that returns a random integer
+// between 1 and 20.
+function twentySidedDie(){
+    return (randomBetween(1,20));
+}
+// Make a function called `twelveSidedDie()` that returns a random integer
+// between 1 and 12.
+function twelveSidedDie(){
+    return (randomBetween(1,12));
+}
+// Make a function called `tetrahedron()` that returns a random integer between 1
+// and 4.
+function tetrahedron(){
+    return (randomBetween(1,4));
+}
