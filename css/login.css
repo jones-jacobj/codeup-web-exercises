@@ -30,7 +30,8 @@ fieldset {
 }
 
 .width-80 {
-    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
     max-width: 80%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -59,9 +60,9 @@ fieldset {
 
 .btn {
     padding: 8px;
-    border: 1px lightgray;
     color: white;
     font-weight: bold;
+    border: 1px lightgray;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
@@ -79,7 +80,7 @@ fieldset {
     padding-bottom: 4px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    width: 100%;
+    width: calc(100% - 16px);
 }
 
 
