@@ -72,3 +72,22 @@ function twelveSidedDie(){
 function tetrahedron(){
     return (randomBetween(1,4));
 }
+
+// Make a function called `rollDie()` that returns an integer between 1 and 6.
+
+function rollDie(){
+    return (Math.floor(Math.random()*6)+1);
+}
+
+// - Make a function called `listOfRolls(num)` that takes in a number containing
+// how many 6-sided dice rolls you want to make. The `listOfRolls` function
+// should return an array of that length, where each element of the array is the
+// result of the `rollDie` function.
+
+function listOfRolls(num){
+    let rolls = [];
+    for(let i=0;i<num; i++){
+        rolls.push(rollDie());
+    }
+    return rolls;
+}
