@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    border: red 0.5px solid;
     color: black;
     font-size:22px;
 }
@@ -10,6 +9,7 @@ a{
     border:0;
     margin:0;
     padding:30px 5px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 a:hover{
@@ -31,6 +31,7 @@ a:hover{
 }
 
 .logo-holder{
+    font-family: 'Montserrat', sans-serif;
     flex-basis:50%;
     font-size:3em;
     padding:.2em 0;
