@@ -6,38 +6,25 @@
 
 a{
     display:inline-block;
-    border:0;
-    margin:0;
-    padding:30px 5px;
     font-family: 'Work Sans', sans-serif;
+    margin: 0 4px;
 }
 
 a:hover{
     color: blue;
 }
 
+ul{
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+}
+
 .navbar{
     display:flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
-    background-color: gray;
-    margin:auto;
-}
-
-.navbar > *{
-    display:flex;
-    justify-content: center;
     align-items: center;
-}
-
-.logo-holder{
-    font-family: 'Montserrat', sans-serif;
-    flex-basis:50%;
-    font-size:3em;
-    padding:.2em 0;
-}
-
-.extra-holder{
-    flex-basis:30%;
-    justify-content: flex-end;
+    background-color: grey;
+    border: darkgrey 1px solid;
 }
