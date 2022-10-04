@@ -21,7 +21,7 @@ a {
     margin: 0 auto;
     display:flex;
     align-items:center;
-    justify-content: center;
+    justify-content: flex-start;
     /* TODO: Make this a flex container and align it's items to the center*/
 }
 
@@ -32,6 +32,8 @@ a {
     border-radius: 4px;
     text-align: center;
     display:flex;
+    flex-direction:column;
+    flex-basis:100%;
     /*  TODO: Change this flex items basis to 100% of the page  */
 }
 
