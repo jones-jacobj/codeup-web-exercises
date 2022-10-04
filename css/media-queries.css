@@ -1,0 +1,41 @@
+.nav-links{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-start;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links>li{
+    padding: 0 1px;
+}
+
+.header-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    flex-basis:50%;
+}
+
+.sub-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    flex-basis:50%;
+}
+
+/* Bigger than 111px (Desktop View) */
+@media screen and (min-width:111px){
+    .alert-info.hidden-on-desktop{
+        display:none;
+    }
+}
