@@ -53,6 +53,6 @@
 
 var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"]
 
-fruits.unshift('strawberry');
-fruits.push('strawberry');
-fruits.splice(3,0,"strawberry");
+// fruits.unshift('strawberry');
+// fruits.push('strawberry');
+// fruits.splice(3,0,"strawberry");
