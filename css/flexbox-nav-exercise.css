@@ -2,6 +2,7 @@
     box-sizing: border-box;
     color: black;
     font-size:22px;
+    border: red 2px solid;
 }
 
 a{
@@ -19,6 +20,11 @@ ul{
     flex-direction: row;
     list-style: none;
     margin:0;
+    padding:0;
+}
+
+ul > img {
+
 }
 
 .navbar{
