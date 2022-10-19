@@ -13,16 +13,17 @@
     <!-- <script src="/js/jquery.js"></script> -->
     <script>
         "use strict";
-        let pressed = [];
-        let code = [38,38,40,40,37,39,37,39,66,65,13];
+        let pressed = "";
+        let code = "38,38,40,40,37,39,37,39,66,65,13,";
         $(document).keyup(function(event){
             console.log(event.keyCode);
             if(event.keyCode == 27){
-                pressed = []
+                pressed = ""
             }else{
-                pressed.push(event.keyCode);
-                console.log(pressed);
+                pressed += (event.keyCode + ',');
             }
+        console.log(pressed);
+        if (pressed==code){alert("KONAMI CODE!");}
         });
     </script>
 </body>
