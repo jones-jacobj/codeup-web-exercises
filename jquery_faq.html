@@ -5,34 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery FAQ</title>
-    <link rel="stylesheet" href="css/jquery_faq.css">
+    <style>
+        dt {
+    font-weight: bold;
+    text-decoration: underline;
+    }
+        .invisible {
+    visibility:hidden;
+    }
+        #toggler {
+    font-size: 35px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    </style>
 </head>
 <body>
     <center><a href='#' id="toggler">Click for Info</a></center>
     <dl>
         <dt>Who is the director of the National Park Service?</dt>
-        <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
+        <dd class="invisible"><li>Charles F. "Chuck" Sams III is the Director of the National Park Service.</li></dd>
         <dt>What government agency oversees the National Park Service?</dt>
-        <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+        <dd class="invisible"><li>The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</li></dd>
         <dt>How many employees are in the National Park Service?</dt>
-        <dd class="invisible">Permanent, temporary, and seasonal employees: Approximately 20,000</dd>
+        <dd class="invisible"><li>Permanent, temporary, and seasonal employees: Approximately 20,000</li></dd>
         <dt>How old is the National Park System?</dt>
-        <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. View the National Park System timeline.</dd>
+        <dd class="invisible"><li>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. View the National Park System timeline.</li></dd>
         <dt>What is the origin of the National Park Service arrowhead?</dt>
-        <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water representing scenic and recreational values, and the arrowhead itself representing historical and archeological values. Read more about the history of the arrowhead and other elements of NPS visual design.</dd>
+        <dd class="invisible"><li>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water representing scenic and recreational values, and the arrowhead itself representing historical and archeological values. Read more about the history of the arrowhead and other elements of NPS visual design.</li></dd>
         <dt>How many areas are in the National Park System?</dt>
-        <dd class="invisible">The system includes 423 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House. Learn more about national park designations. See the complete list of National Park Service units and related areas by type and number.</dd>
+        <dd class="invisible"><li>The system includes 423 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House. Learn more about national park designations. See the complete list of National Park Service units and related areas by type and number.</li></dd>
         <dt>What is the largest national park site? Smallest?</dt>
-        <dd class="invisible">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
-        <dd class="invisible">Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
+        <dd class="invisible"><li>Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</li></dd>
+        <dd class="invisible"><li>Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</li></dd>
         <dt>How many people visit the national parks?</dt>
-        <dd class="invisible">Total recreation visitors to the national parks in 2021: 297,115,406.</dd>
+        <dd class="invisible"><li>Total recreation visitors to the national parks in 2021: 297,115,406.</li></dd>
         <dt>What is the National Park Service budget?</dt>
-        <dd class="invisible">Fiscal Year (FY) 2014 Enacted: $2.98 billion</dd>
+        <dd class="invisible"><li>Fiscal Year (FY) 2014 Enacted: $2.98 billion</li></dd>
         <dt>How do I obtain a park entrance pass?</dt>
-        <dd class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit. (See the park search to locate a specific park.) There are a number of entrance passes available, including park-specific passes as well as passes that offer entrance to more than 2,000 federal recreation sites in addition to the national parks (Annual, Military, Senior, 4th Grade, Access, and Volunteer passes). Learn more about the America the Beautiful - The National Parks and Federal Recreational Lands Pass.</dd>
+        <dd class="invisible"><li>Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit. (See the park search to locate a specific park.) There are a number of entrance passes available, including park-specific passes as well as passes that offer entrance to more than 2,000 federal recreation sites in addition to the national parks (Annual, Military, Senior, 4th Grade, Access, and Volunteer passes). Learn more about the America the Beautiful - The National Parks and Federal Recreational Lands Pass.</li></dd>
     </dl>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="js/jquery_faq.js"></script>
+    <script>
+        $('#toggler').click(function(){
+            $('dd').toggleClass('invisible')})
+        $('dt').click(function(){
+            $('dt').css('border','0');
+            $(this).css('border','5px blue dotted');})
+    </script>
 </body>
 </html>
