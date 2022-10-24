@@ -2,47 +2,88 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <style>
+        h1 {
+            font-size:55px;
+            font-weight:bold;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        td,  tr{
+            text-align:center;
+        }
+        th {
+            background-color: palegreen;
+            border: 0.5px black solid;
+        }
+    </style>
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center text-center">
+            <h1>My Tool Store</h1>
+        </div>
+    </div>
+<div class="row">
+    <table id="products">
+        <thead>
+            <tr>
+                <div class="col-3">
+                    <th>Title</th>
+                </div>
+                <div class="col-3">
+                    <th>Quantity</th>
+                </div>
+                <div class="col-3">
+                    <th>Price</th>
+                </div>
+                <div class="col-3">
+                    <th>Categories</th>
+                </div>
+            </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
+</div>
 
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+<div class="row justify-content-center">
+    <div class="col-4"></div>
+    <div class="col-4 d-flex justify-content-center"><button type="button" id="refresh">Refresh</button></div>
+    <div class="col-4"></div>
+</div>
+</div>
+
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
 <script>
 (function() {
     "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax(".idea/data/inventory.json").done(function(data){
-        console.log(data);
-        for (let i=0; i<data.length; i++){
-            $('#insertProducts').append("<tr>");
-            $('#insertProducts').append('<td>'+data[i].title+"</td>");
-            $('#insertProducts').append('<td>'+data[i].quantity+"</td>");
-            $('#insertProducts').append('<td>'+data[i].price+"</td>");
-            $('#insertProducts').append('<td>'+data[i].categories+"</td>");
-            $('#insertProducts').append("</tr>");
-        }
 
-    });
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+    function update(){
+        $('#insertProducts').empty();   // Clear out list
+        $.ajax(".idea/data/inventory.json").done(function(data){    // Pull from data/inventory.json
+            for (let i=0; i<data.length; i++){  // Print out in table format     
+                $('#insertProducts').append("<tr>");    // Create new row for this data grouping
+                $('#insertProducts').append('<td>'+data[i].title+"</td>");
+                $('#insertProducts').append('<td>'+data[i].quantity+"</td>");
+                $('#insertProducts').append('<td>'+data[i].price+"</td>");
+                $('#insertProducts').append('<td>'+data[i].categories+"</td>");
+                $('#insertProducts').append("</tr>");
+            }
+        })
+    };
+
+    update();
+
+    document.getElementById('refresh').addEventListener("click", update);   // Refresh button 
 })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>
