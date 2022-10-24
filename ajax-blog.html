@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Blog</title>
+    <style>
+        #title {
+            text-align: left;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 22px;
+        }
+        #date {
+            text-align: right;
+        }
+        #contents {
+            text-align: center;
+        }
+        #categories {
+            text-align: right;
+            font-size: 12px;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="posts"></div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        (function(){
+            function update(){
+                $.ajax(".idea/data/blog.json").done(function(data){
+                    console.log(data);
+                    for (let i=0; i<data.length; i++){
+                        $('#posts').append("<div id='title'>"+data[i].title+"</div><br>");
+                        $('#posts').append("<div id='date'>"+data[i].date+"</div><br>");
+                        $('#posts').append("<div id='contents'>"+data[i].content+"</div><br>");
+                        $('#posts').append("<div id='categories'>"+data[i].categories+"</div><br>");
+                    }
+                })
+            }
+
+            update();
+        })();
+        
+    </script>
+</body>
+</html>
