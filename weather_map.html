@@ -25,7 +25,8 @@
         <!-- label | text input | button -->
         <div id="locationSearchInputButtonLabelRow" class="row">
             <label class="col-1" for="loc">Place</label>
-            <input class="col-2" type="text" id="location" name="loc"> <button type="button" class="btn btn-primary col-1">Primary</button>
+            <input id="locationSearchInput" class="col-2" type="text" id="location" name="loc" placeholder="City,State or Zip"> 
+            <button id="locationSearchButton" type="button" class="btn btn-primary col-1">Find</button>
         </div>
         <!-- five days of weather forecast -->
         <div id="fiveDayWeather" class="row">
@@ -33,6 +34,7 @@
                 <h5 class="card-header text-center">{DATE}</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">TEMP</li>
                         <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
                         <li class="list-group-item">{WIND}</li>
                         <li class="list-group-item">{PRESSURE}</li>
@@ -43,6 +45,7 @@
                 <h5 class="card-header text-center">{DATE}</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">TEMP</li>
                         <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
                         <li class="list-group-item">{WIND}</li>
                         <li class="list-group-item">{PRESSURE}</li>
@@ -53,6 +56,7 @@
                 <h5 class="card-header text-center">{DATE}</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">TEMP</li>
                         <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
                         <li class="list-group-item">{WIND}</li>
                         <li class="list-group-item">{PRESSURE}</li>
@@ -63,6 +67,7 @@
                 <h5 class="card-header text-center">{DATE}</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">TEMP</li>
                         <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
                         <li class="list-group-item">{WIND}</li>
                         <li class="list-group-item">{PRESSURE}</li>
@@ -73,6 +78,7 @@
                 <h5 class="card-header text-center">{DATE}</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item">TEMP</li>
                         <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
                         <li class="list-group-item">{WIND}</li>
                         <li class="list-group-item">{PRESSURE}</li>
