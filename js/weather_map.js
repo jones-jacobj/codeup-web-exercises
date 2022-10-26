@@ -34,43 +34,46 @@ function getLatLong(location){
     
 }
 
-function getWeather(location){
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+// Query Open Weather API for information
+function getWeather(location){  
+    $.get("http://api.openweathermap.org/data/2.5/forecast/", {
         APPID: OPEN_WEATHER_APPID,
         lat:   location[0],
         lon:   location[1], 
         units: "imperial",
     }).done(function(data){
+        console.log(data);
         updateFiveDayForecast(data);
     });
 }
 
 getWeather([29.423017,-98.48527])
 
-
 function updateFiveDayForecast(data){
-    console.log(data);
     // Set the City Name
     document.getElementById('cityName').innerHTML = `Current City: ${data.city.name}`;
     for (let i=1; i<6; i++){
         setCards(i, data);
     }
 }
-
+// Start at index 4, which is 12oclock noon
+var count = 4;
 // Makes the cards reflect the appropriate information for that date
 function setCards(card, data){
-    let i = card;
+    // Set values
     let cardName=`#DAY0`+card;
-    let temp = `${(data["list"][i]["main"]["temp"])}°F`
-    let date = `${(data["list"][i]["dt_txt"]).slice(0,-9)}`
-    let description = `Description: ${data["list"][i]["weather"][0]["description"]}`;
-    let humidity = `Humidity: ${data['list'][i]['main']['humidity']}`;
-    let wind = `Wind: ${data["list"][i]["wind"]["speed"]}`;
-    let pressure = `Pressure: ${data["list"][i]["main"]["pressure"]}`;
+    let temp = `${(data["list"][count]["main"]["temp"])}°F`
+    let date = `${(data["list"][count]["dt_txt"]).slice(0,-9)}`
+    let description = `Description: ${data["list"][count]["weather"][0]["description"]}`;
+    let humidity = `Humidity: ${data['list'][count]['main']['humidity']}`;
+    let wind = `Wind: ${data["list"][count]["wind"]["speed"]}`;
+    let pressure = `Pressure: ${data["list"][count]["main"]["pressure"]}`;
+    // Render Values to User
     $(cardName).find('.card-header')[0].innerHTML = date;
     $(cardName).find('.list-group-item:nth-of-type(1)')[0].innerHTML = temp;
     $(cardName).find('.list-group-item:nth-of-type(2)')[0].innerHTML = description +"<br><br>"+humidity;
     $(cardName).find('.list-group-item:nth-of-type(3)')[0].innerHTML = wind;
     $(cardName).find('.list-group-item:nth-of-type(4)')[0].innerHTML = pressure;
-    
+    // Increment index location, by 24 hours (from previous location of 12oclock noon)
+    count += 8;
 }
