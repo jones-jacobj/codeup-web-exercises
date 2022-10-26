@@ -15,7 +15,6 @@
 }
 
 #map {
-    /* the width and height may be set to any size */
     width: 100%;
     height: 700px;
 }
@@ -38,6 +37,7 @@
     width: 15rem;
 }
 
+/* The contents of the card, moved slightly more to the leftside */
 .list-group-item {
     text-align:left;
     margin-left:0;
@@ -49,7 +49,7 @@
     margin-top:15px;
 }
 
-/* The label for the search box (actual text) */
+/* Align text for the label of the search box */
 #locationSearchInputButtonLabelRow .col-1:first-child{
     text-align:right;
     align-self:center;

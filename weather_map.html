@@ -17,17 +17,17 @@
 
 <body>
     <div class="container">
-        <!-- TOP BLUE BANNER -->
+        <!-- top blue banner -->
         <div id="banner" class="row d-flex flex-direction-row">
             <div class="col">Weather App</div>
             <div id="cityName" class="col">DEFAULT VALUE</div>
         </div>
-        <!-- LABEL | TEXT INPUT | BUTTON -->
+        <!-- label | text input | button -->
         <div id="locationSearchInputButtonLabelRow" class="row">
             <label class="col-1" for="loc">Place</label>
             <input class="col-2" type="text" id="location" name="loc"> <button type="button" class="btn btn-primary col-1">Primary</button>
         </div>
-        <!-- FIVE DAYS OF WEATHER FORECAST -->
+        <!-- five days of weather forecast -->
         <div id="fiveDayWeather" class="row">
             <div id="DAY01" class="card">
                 <h5 class="card-header text-center">{DATE}</h5>
@@ -39,8 +39,48 @@
                     </ul>
                 </div>
             </div>
+            <div id="DAY02" class="card">
+                <h5 class="card-header text-center">{DATE}</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
+                        <li class="list-group-item">{WIND}</li>
+                        <li class="list-group-item">{PRESSURE}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="DAY03" class="card">
+                <h5 class="card-header text-center">{DATE}</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
+                        <li class="list-group-item">{WIND}</li>
+                        <li class="list-group-item">{PRESSURE}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="DAY04" class="card">
+                <h5 class="card-header text-center">{DATE}</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
+                        <li class="list-group-item">{WIND}</li>
+                        <li class="list-group-item">{PRESSURE}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="DAY05" class="card">
+                <h5 class="card-header text-center">{DATE}</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
+                        <li class="list-group-item">{WIND}</li>
+                        <li class="list-group-item">{PRESSURE}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!-- ACTUAL MAP DISPLAY  -->
+        <!-- actual map display  -->
         <div class="row">
             <div class="col">
                 <div id="map"></div>
