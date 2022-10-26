@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Map</title> 
+    <title>Weather Map</title>
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- MAPBOX -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!-- LOCAL CSS -->
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
+
 <body>
     <div class="container">
-            <div id="banner" class="row d-flex flex-direction-row">
-                <div class="col">Weather App</div>
-                <div class="col">Current City: San Antonio</div>
+        <!-- TOP BLUE BANNER -->
+        <div id="banner" class="row d-flex flex-direction-row">
+            <div class="col">Weather App</div>
+            <div id="cityName" class="col">DEFAULT VALUE</div>
+        </div>
+        <!-- LABEL | TEXT INPUT | BUTTON -->
+        <div id="locationSearchInputButtonLabelRow" class="row">
+            <label class="col-1" for="loc">Place</label>
+            <input class="col-2" type="text" id="location" name="loc"> <button type="button" class="btn btn-primary col-1">Primary</button>
+        </div>
+        <!-- FIVE DAYS OF WEATHER FORECAST -->
+        <div id="fiveDayWeather" class="row">
+            <div id="DAY01" class="card">
+                <h5 class="card-header text-center">{DATE}</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item listItemSeperate">{DESCRIPTION}<br><br>{HUMIDITY}</li>
+                        <li class="list-group-item">{WIND}</li>
+                        <li class="list-group-item">{PRESSURE}</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        <!-- ACTUAL MAP DISPLAY  -->
         <div class="row">
             <div class="col">
                 <div id="map"></div>
@@ -25,9 +48,12 @@
         </div>
     </div>
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
     <!-- MAPBOX -->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <!-- LOCAL KEYS -->
@@ -35,4 +61,5 @@
     <!-- LOCAL JS -->
     <script src="js/weather_map.js"></script>
 </body>
+
 </html>

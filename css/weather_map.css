@@ -9,9 +9,9 @@
     justify-content: center;
 }
 
-/* Current City: {CityName} text */
-#banner>.col:nth-of-type(2) {
-    text-align:right;
+/* Name of the currently viewed city, in top right */
+#cityName{
+    text-align: right;
 }
 
 #map {
@@ -20,3 +20,42 @@
     height: 700px;
 }
 
+.card {
+    margin-top:45px;
+    margin-bottom:45px;
+    padding-left:0;
+    padding-right:0;
+}
+
+/* Stop five day weather output from wrapping the fifth day */
+#fiveDayWeather {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#fiveDayWeather .card{
+    width: 15rem;
+}
+
+.list-group-item {
+    text-align:left;
+    margin-left:0;
+    padding-left:0;
+}
+
+/* Move the label, text search, and button down */
+#locationSearchInputButtonLabelRow {
+    margin-top:15px;
+}
+
+/* The label for the search box (actual text) */
+#locationSearchInputButtonLabelRow .col-1:first-child{
+    text-align:right;
+    align-self:center;
+}
+
+/* Scooch button over a tad from text input */
+#locationSearchInputButtonLabelRow .btn{
+    margin-left: 5px;
+}
