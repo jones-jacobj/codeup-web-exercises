@@ -1,101 +1,101 @@
-
 html, body {
-    background-color: whitesmoke;
+	background-color: whitesmoke;
 }
 
 #banner {
-    background-color:#007E33;
-    color:white;
-    font-size:22px;
-    padding-left:4px;
-    padding-top:1px;
-    display: flex;
-    justify-content: center;
+	background-color: #007E33;
+	color: white;
+	font-size: 22px;
+	padding-left: 4px;
+	padding-top: 1px;
+	display: flex;
+	justify-content: center;
 }
 
 /* Name of the currently viewed city, in top right */
-#cityName{
-    text-align: right;
+#cityName {
+	text-align: right;
 }
 
 #map {
-    width: 100%;
-    height: 600px;
-    border: 6px #00C851 solid;
+	width: 100%;
+	height: 600px;
+	border: 6px #00C851 solid;
 }
 
 .card {
-    margin-top:45px;
-    margin-bottom:45px;
-    padding-left:0;
-    padding-right:0;
-    max-width: 230px;
-    border: 2px solid #007E33;
+	margin-top: 45px;
+	margin-bottom: 45px;
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 230px;
+	border: 2px solid #007E33;
 }
 
 .card-header {
-    background-color: #00C851;
+	background-color: #00C851;
 }
 
-#currentlyContainer{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-left: auto;
+#currentlyContainer {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin-left: auto;
 }
 
-#currently{
-    text-align: right;
-    align-self: center;
+#currently {
+	text-align: right;
+	align-self: center;
 }
 
 /* The container which holds the banner, the search box and button, and scrolls down the page with the user */
 #headerContainer {
-    background-color:white;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index:20;
-    border: 1px solid #007E33;
+	background-color: white;
+	position: -webkit-sticky;
+ /* Safari */
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	border: 1px solid #007E33;
 }
 
 /* Stop five day weather output from wrapping the fifth day */
 #fiveDayWeather {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
-#fiveDayWeather .card{
-    width: 16rem;
+#fiveDayWeather .card {
+	width: 16rem;
 }
 
 /* The contents of the card, moved slightly to the leftside */
 .list-group-item {
-    text-align:left;
-    margin-left:0;
-    padding-left:0;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 /* Temperature in degrees °F */
 .list-group-item:nth-child(1) {
-    text-align:center;
+	text-align: center;
 }
 
 /* Move the label, text search, and button down */
 #locationSearchInputButtonLabelRow {
-    margin-top:3px;
-    margin-left:-58px;
-    padding-bottom:5px;
+	margin-top: 3px;
+	margin-left: -58px;
+	padding-bottom: 5px;
 }
 
 /* Align text for the label of the search box */
-#locationSearchInputButtonLabelRow .col-1:first-child{
-    text-align:right;
-    align-self:center;
+#locationSearchInputButtonLabelRow .col-1:first-child {
+	text-align: right;
+	align-self: center;
 }
 
 /* Scooch button over a tad from text input */
-#locationSearchInputButtonLabelRow .btn{
-    margin-left: 5px;
+#locationSearchInputButtonLabelRow .btn {
+	margin-left: 5px;
 }
