@@ -23,6 +23,7 @@ function geocode(search) {
             return res.json();
         // to get all the data from the request, comment out the following three lines...
         }).then(function(data) {
+            // map.transform.center = [data['features'][0]['center'][0],data['features'][0]['center'][1]];
             let invertedLatLong = [data['features'][0]['center'][1],data['features'][0]['center'][0]]
             getWeather(invertedLatLong);
         });
@@ -45,10 +46,11 @@ getWeather([29.423017,-98.48527])
 // Start at index 4, which is 12oclock noon
 var count = 4;
 
+
 function updateFiveDayForecast(data){
     // Set the City Name
     document.getElementById('cityName').innerHTML = `Current City: ${data.city.name}`;
-    count = 4;
+    count = 4;          // Reset count back to index 4 (12 oclock noon);
     for (let i=1; i<6; i++){
         setCards(i, data);
     }

@@ -1,6 +1,10 @@
 
+html, body {
+    background-color: whitesmoke;
+}
+
 #banner {
-    background-color:blue;
+    background-color:#007E33;
     color:white;
     font-size:22px;
     padding-left:4px;
@@ -16,7 +20,8 @@
 
 #map {
     width: 100%;
-    height: 700px;
+    height: 600px;
+    border: 6px #00C851 solid;
 }
 
 .card {
@@ -24,6 +29,22 @@
     margin-bottom:45px;
     padding-left:0;
     padding-right:0;
+    max-width: 230px;
+    border: 2px solid #007E33;
+}
+
+.card-header {
+    background-color: #00C851;
+}
+
+/* The container which holds the banner, the search box and button, and scrolls down the page with the user */
+#headerContainer {
+    background-color:white;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index:20;
+    border: 1px solid #007E33;
 }
 
 /* Stop five day weather output from wrapping the fifth day */
@@ -51,7 +72,9 @@
 
 /* Move the label, text search, and button down */
 #locationSearchInputButtonLabelRow {
-    margin-top:15px;
+    margin-top:3px;
+    margin-left:-58px;
+    padding-bottom:5px;
 }
 
 /* Align text for the label of the search box */

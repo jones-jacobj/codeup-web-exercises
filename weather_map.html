@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="headerContainer" class="container">
         <!-- top blue banner -->
         <div id="banner" class="row d-flex flex-direction-row">
             <div class="col">Weather App</div>
@@ -26,8 +26,10 @@
         <div id="locationSearchInputButtonLabelRow" class="row">
             <label class="col-1" for="loc">Place</label>
             <input id="locationSearchInput" class="col-2" type="text" id="location" name="loc" placeholder="City,State or Zip"> 
-            <button id="locationSearchButton" type="button" class="btn btn-primary col-1">Find</button>
+            <button id="locationSearchButton" type="button" class="btn btn-success col-1">Find</button>
         </div>
+    </div>
+    <div class="container">
         <!-- five days of weather forecast -->
         <div id="fiveDayWeather" class="row">
             <div id="DAY01" class="card">
