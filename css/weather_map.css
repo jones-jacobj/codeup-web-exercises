@@ -37,6 +37,18 @@ html, body {
     background-color: #00C851;
 }
 
+#currentlyContainer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: auto;
+}
+
+#currently{
+    text-align: right;
+    align-self: center;
+}
+
 /* The container which holds the banner, the search box and button, and scrolls down the page with the user */
 #headerContainer {
     background-color:white;

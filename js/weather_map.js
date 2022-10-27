@@ -1,9 +1,19 @@
-// Location search button
-$('#locationSearchButton').on('click',function(){
+
+// Take input from search box and then pass to be geocoded
+function parseInput(){
     let val = $('#locationSearchInput')[0].value;
     $('#locationSearchInput')[0].value = "";    
     geocode(val);
-});
+}
+
+// Location search button Event Listener
+$('#locationSearchButton').on('click',parseInput);
+// Enter Key Event Listener
+document.addEventListener('keydown',function(event){
+    if(event.key === 'Enter'){
+        parseInput();
+    }
+})
 
 // Get Map => display map
 mapboxgl.accessToken = MAPBOX_KEY
