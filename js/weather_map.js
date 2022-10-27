@@ -4,15 +4,18 @@ function parseInput() {
 	$('#locationSearchInput')[0].value = "";
 	geocode(val);
 }
+
 // Location search button Event Listener
 $('#locationSearchButton').on('click', parseInput);
+
 // Enter Key Event Listener
 document.addEventListener('keydown', function(event) {
 		if(event.key === 'Enter') {
 			parseInput();
 		}
 	})
-	// Get Map => display map
+
+// Get Map => display map
 mapboxgl.accessToken = MAPBOX_KEY
 var map = new mapboxgl.Map({
 	container: 'map',
@@ -29,7 +32,9 @@ function geocode(search) {
 		return res.json();
 		// to get all the data from the request, comment out the following three lines...
 	}).then(function(data) {
-		// map.transform.center = [data['features'][0]['center'][0],data['features'][0]['center'][1]];
+        map.flyTo({
+            center:[data['features'][0]['center'][0],data['features'][0]['center'][1]]
+        });
 		let invertedLatLong = [data['features'][0]['center'][1], data['features'][0]['center'][0]]
 		getWeather(invertedLatLong);
 	});
