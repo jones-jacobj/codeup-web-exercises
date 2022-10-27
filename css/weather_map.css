@@ -29,6 +29,7 @@ html, body {
 	padding-left: 0;
 	padding-right: 0;
 	max-width: 230px;
+    min-width: 230px;
 	border: 2px solid #007E33;
 }
 

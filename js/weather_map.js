@@ -1,3 +1,9 @@
+
+// let weatherIcons : {
+    
+// }
+
+
 // Take input from search box and then pass to be geocoded
 function parseInput() {
 	let val = $('#locationSearchInput')[0].value;
@@ -32,9 +38,7 @@ function geocode(search) {
 		return res.json();
 		// to get all the data from the request, comment out the following three lines...
 	}).then(function(data) {
-        map.flyTo({
-            center:[data['features'][0]['center'][0],data['features'][0]['center'][1]]
-        });
+        map.flyTo({center:[data['features'][0]['center'][0],data['features'][0]['center'][1]]});
 		let invertedLatLong = [data['features'][0]['center'][1], data['features'][0]['center'][0]]
 		getWeather(invertedLatLong);
 	});
@@ -57,7 +61,9 @@ var count = 4;
 
 function updateFiveDayForecast(data) {
 	// Set the City Name
+    console.log(data);
 	document.getElementById('cityName').innerHTML = `Current City: ${data.city.name}`;
+    // document.getElementById('currently').innerHTML = `Time: ${data.city} Temp: ${}`;
 	count = 4; // Reset count back to index 4 (12 oclock noon);
 	for(let i = 1; i < 6; i++) {
 		setCards(i, data);
