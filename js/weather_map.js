@@ -1,9 +1,3 @@
-
-// let weatherIcons : {
-    
-// }
-
-
 // Take input from search box and then pass to be geocoded
 function parseInput() {
 	let val = $('#locationSearchInput')[0].value;
@@ -58,10 +52,15 @@ function getWeather(location) {
 getWeather([29.423017, -98.48527])
 	// Start at index 4, which is 12oclock noon
 var count = 4;
+let marker;
 
 function updateFiveDayForecast(data) {
+	if(marker){marker.remove();}	// If an old markers exist => remove it
+	marker = new mapboxgl.Marker()
+	.setLngLat([data.city.coord.lon,data.city.coord.lat])
+	.addTo(map);
+
 	// Set the City Name
-    console.log(data);
 	document.getElementById('cityName').innerHTML = `Current City: ${data.city.name}`;
     // document.getElementById('currently').innerHTML = `Time: ${data.city} Temp: ${}`;
 	count = 4; // Reset count back to index 4 (12 oclock noon);
@@ -72,6 +71,8 @@ function updateFiveDayForecast(data) {
 // Makes the cards reflect the appropriate information for that date
 function setCards(card, data) {
 	// Set values
+	let icon = data["list"][count]["weather"][0]["icon"];
+	let weatherIcon = 'http://openweathermap.org/img/w/' + icon + ".png";
 	let cardName = `#DAY0` + card;
 	let temp = `${data["list"][count]["main"]["temp"]}°F`;
 	let date = `${data["list"][count]["dt_txt"]}`.slice(0, -9);
@@ -81,7 +82,7 @@ function setCards(card, data) {
 	let pressure = `Pressure: ${data["list"][count]["main"]["pressure"]}`;
 	// Render Values to User
 	$(cardName).find('.card-header')[0].innerHTML = date;
-	$(cardName).find('.list-group-item:nth-of-type(1)')[0].innerHTML = temp;
+	$(cardName).find('.list-group-item:nth-of-type(1)')[0].innerHTML = `${temp} <br> <img src=${weatherIcon} alt='weather'></img>`;
 	$(cardName).find('.list-group-item:nth-of-type(2)')[0].innerHTML = description + "<br><br>" + humidity;
 	$(cardName).find('.list-group-item:nth-of-type(3)')[0].innerHTML = wind;
 	$(cardName).find('.list-group-item:nth-of-type(4)')[0].innerHTML = pressure;
