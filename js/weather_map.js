@@ -55,10 +55,11 @@ var count = 4;
 let marker;
 
 function updateFiveDayForecast(data) {
+	console.log(data);
 	if(marker){marker.remove();}	// If an old markers exist => remove it
 	marker = new mapboxgl.Marker()
-	.setLngLat([data.city.coord.lon,data.city.coord.lat])
-	.addTo(map);
+		.setLngLat([data.city.coord.lon,data.city.coord.lat])
+		.addTo(map);
 
 	// Set the City Name
 	document.getElementById('cityName').innerHTML = `Current City: ${data.city.name}`;
