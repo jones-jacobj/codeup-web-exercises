@@ -64,9 +64,7 @@ htmlBody.innerHTML += (totalYears/users.length);
 
 // //Reduce
 const longestEmail = users.reduce(function(thisUser, user) {
-    if(user.email.length > thisUser.email.length){
-        thisUser = user;
-    }
+    if(user.email.length > thisUser.email.length){thisUser = user;}
     return thisUser;
 },{'email':''})
 htmlBody.innerHTML += "<br>Longest eMail address<br>";
@@ -76,3 +74,11 @@ htmlBody.innerHTML += longestEmail.email;
 const combinedUserNames = users.reduce((names, user) => names += user.name + ", ","");
 htmlBody.innerHTML += "<br>Combined User Names<br>";
 htmlBody.innerHTML += combinedUserNames;
+
+//Bonus
+const uniqueNames = users.reduce((uniques, user) => {
+    user.languages.forEach((el) => {if(!uniques.includes(el)){uniques.push(el)}});
+    return uniques;
+},[]);
+htmlBody.innerHTML += "<br>Unique Languages<br>";
+htmlBody.innerHTML += uniqueNames;
