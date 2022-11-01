@@ -13,3 +13,18 @@ async function getLastCommit(username){
 
 
 getLastCommit('jones-jacobj');
+
+function wait(timer){
+    return new Promise((resolve,reject)=>
+    {
+        setTimeout(()=>resolve(),timer*1000);
+    })
+    .then(()=>console.log("Passed"))
+    .catch(()=>console.log("Failed"));
+}
+
+
+// wait(timer*1000).then(()=>console.log(`You'll see this after ${timer} seconds`));
+
+wait(1);
+wait(3);
