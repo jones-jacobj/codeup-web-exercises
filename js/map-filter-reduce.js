@@ -62,7 +62,7 @@ htmlBody.innerHTML += totalYears;
 htmlBody.innerHTML += "<br>Average years experience<br>";
 htmlBody.innerHTML += (totalYears/users.length);
 
-// //Reduce
+//reduce
 const longestEmail = users.reduce(function(thisUser, user) {
     if(user.email.length > thisUser.email.length){thisUser = user;}
     return thisUser;
