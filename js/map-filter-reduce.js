@@ -71,15 +71,17 @@ htmlBody.innerHTML += "<br>Longest eMail address<br>";
 htmlBody.innerHTML += longestEmail.email;
 
 //reduce
-// const combinedUserNames = users.reduce((names, user) => names += user.name + ", ","");
-const combinedUserNames = users.reduce((names,user) => {
-    if (users.indexOf(user) === users.length-1){
-        names += user.name
-    }else {
-        names += user.name + ", "
+const combinedUserNames = users.reduce((startingValue,currentElement) => {
+    if (users.indexOf(currentElement) === users.length-1){
+        startingValue += currentElement.name
+    } else {
+        startingValue += currentElement.name + ", "
     }
-    return names;
+    return startingValue;
 },"");
+
+// const combinedUserNames = users.reduce((names,user) => {(users.indexOf(user) === users.length-1) ? names += user.name : names += user.name + ","; return names;},"");
+
 htmlBody.innerHTML += "<br>Combined User Names<br>";
 htmlBody.innerHTML += combinedUserNames;
 
