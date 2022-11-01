@@ -71,12 +71,20 @@ htmlBody.innerHTML += "<br>Longest eMail address<br>";
 htmlBody.innerHTML += longestEmail.email;
 
 //reduce
-const combinedUserNames = users.reduce((names, user) => names += user.name + ", ","");
+// const combinedUserNames = users.reduce((names, user) => names += user.name + ", ","");
+const combinedUserNames = users.reduce((names,user) => {
+    if (users.indexOf(user) === users.length-1){
+        names += user.name
+    }else {
+        names += user.name + ", "
+    }
+    return names;
+},"");
 htmlBody.innerHTML += "<br>Combined User Names<br>";
 htmlBody.innerHTML += combinedUserNames;
 
 //Bonus
-const uniqueNames = users.reduce((uniques, user) => {
+const uniqueNames = users.reduce((uniques, user) => {   
     user.languages.forEach((el) => {if(!uniques.includes(el)){uniques.push(el)}});
     return uniques;
 },[]);
