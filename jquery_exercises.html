@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Exercises</title>
+</head>
+<body>
+    <h1 class="codeup">MY H1</h1>
+    <p>My paragraph</p>
+    <ul>
+        <li class="codeup">List Item</li>
+    </ul>
+    <div>Div Item</div>
+    <!-- JQUERY JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        // window.onload = () => {
+        //     alert( 'The page has finished loading!' );
+        // }
+        // alert($('#liItem'));
+        // $(".codeup").css("border",'solid 1px red');
+        $('li').css("font-size","20px");
+        $('h1, p, li').css("background-color",'yellow');
+        alert($('h1').html);
+
+    </script>
+</body>
+</html>
